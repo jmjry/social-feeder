@@ -18,11 +18,20 @@ class Profile(models.Model):
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
+
+    def get_friends(self):
+        return self.friends.all()
+        
+
+    def get_friends_no(self):
+        return self.friends.all().count()
+
+
     def __str__(self):
         return f"{self.user.username}-{self.created.strftime('%d-%m-%Y')}"
     
 
-    # To check that profiles don't have the same information 
+# To check that profiles don't have the same information 
 
     def save(self, *args, **kwargs):
         ex = False
