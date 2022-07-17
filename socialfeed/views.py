@@ -11,3 +11,4 @@ def home_view(request):
     }
     return render(request, 'main/home.html', context)
     # return HttpResponse('Hello world')
+    
