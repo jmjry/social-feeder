@@ -36,7 +36,6 @@ class Comment(models.Model):
         return str(self.pk)
 
 
-
 class Like(models.Model): 
     user = models.ForeignKey(Profile, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
