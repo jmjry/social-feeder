@@ -185,6 +185,7 @@ The navigation bar presents the page name, Social, Feed, Post, User and Logout. 
  * To ensure my HTML code was formatted correctly, I ran it through a formatter which can be found here: [HTML Code Formatter](https://www.freeformatter.com/html-formatter.html)
  * To ensure my JavaScript code was formatted correctly, I ran it through a formatter which can be found here: [JavaScript Code Formatter](https://beautifier.io/)
  * To ensure my Python code was formatted correctly, I ran it through a PEP8 formatter which can be found here: [Python Formatter](https://codebeautify.org/python-formatter-beautifier) 
+ * To create representation images of the site [Am I Responsive](https://ui.dev/amiresponsive)
 
 
 ## Content 
