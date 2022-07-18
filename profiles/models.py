@@ -27,6 +27,14 @@ class Profile(models.Model):
         return self.friends.all().count()
 
 
+    def get_posts_no(self):
+        return self.posts.all().count()
+        
+
+    def get_all_authors_posts(self):
+        return self.posts.all()
+
+
     def __str__(self):
         return f"{self.user.username}-{self.created.strftime('%d-%m-%Y')}"
     

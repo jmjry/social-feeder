@@ -14,10 +14,12 @@ class Post(models.Model):
 
     def __str__(self):
         return str(self.content[:20])
-
+        
+    # Returns number of likes:
     def num_likes(self):
         return self.liked.all().count()
 
+    # Returns number of comments:
     def num_comments(self):
         return self.comment_set.all().count()
 
