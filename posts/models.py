@@ -34,6 +34,12 @@ class Comment(models.Model):
 
     def __str__(self):
         return str(self.pk)
+    
+
+LIKE_CHOICES = (
+    ('Like', 'Like'),
+    ('Unlike', 'Unlike'),
+)
 
 
 class Like(models.Model): 
