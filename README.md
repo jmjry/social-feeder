@@ -122,7 +122,7 @@ The navigation bar presents the page name, Social, Feed, Post, User and Logout. 
 
 - JavaScript
 
-- Python 3.2
+- Python 3.8
 
 - [GitHub](https://github.com/) is the repository used for projec codes to be pushed from VSCode.
 
