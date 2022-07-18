@@ -7,6 +7,7 @@ from django.db.models import Q
 
 # Create your models here.
 
+
 class ProfileManager(models.Manager):
 
     def get_all_profiles_to_invite(self, sender):
@@ -29,6 +30,7 @@ class ProfileManager(models.Manager):
         print("#########")
         return available
         
+
 
     def get_all_profiles(self, me):
         profiles = Profile.objects.all().exclude(user=me)
@@ -56,8 +58,8 @@ class Profile(models.Model):
 
     def get_absolute_url(self):
         return reverse("profiles:profile-detail-view", kwargs={"slug": self.slug})
-        
     
+
     def get_friends(self):
         return self.friends.all()
 
@@ -115,6 +117,7 @@ class Profile(models.Model):
                 to_slug = str(self.user)
         self.slug = to_slug
         super().save(*args, **kwargs)
+
 
 STATUS_CHOICES = (
     ('send', 'send'),
