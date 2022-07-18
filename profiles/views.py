@@ -37,3 +37,5 @@ def invites_received_view(request):
     }
 
     return render(request, 'profiles/my_invites.html', context)
+
+
