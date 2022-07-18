@@ -24,6 +24,7 @@ class Post(models.Model):
     class Meta:
         ordering = ('-created',)
 
+
 class Comment(models.Model):
     user = models.ForeignKey(Profile, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
