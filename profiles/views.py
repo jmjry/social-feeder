@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Profile, Relationship
 from .forms import ProfileModelForm
 from django.views.generic import ListView
@@ -112,7 +112,7 @@ def remove_from_friends(request):
 
 
 def accept_invatation(request):
-    if request.method=="POST":
+    if request.method == "POST":
         pk = request.POST.get('profile_pk')
         sender = Profile.objects.get(pk=pk)
         receiver = Profile.objects.get(user=request.user)
@@ -122,3 +122,12 @@ def accept_invatation(request):
             rel.save()
     return redirect('profiles:my-invites-view')
 
+
+def reject_invatation(request):
+    if request.method == "POST":
+        pk = request.POST.get('profile_pk')
+        receiver = Profile.objects.get(user=request.user)
+        sender = Profile.objects.get(pk=pk)
+        rel = get_object_or_404(Relationship, sender=sender, receiver=receiver)
+        rel.delete()
+    return redirect('profiles:my-invites-view')
