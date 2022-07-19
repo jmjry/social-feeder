@@ -6,9 +6,7 @@ from .forms import PostModelForm, CommentModelForm
 from django.views.generic import UpdateView, DeleteView
 from django.contrib import messages
 from django.http import JsonResponse
-
 # Create your views here.
-
 
 def post_comment_create_and_list_view(request):
     qs = Post.objects.all()
@@ -51,7 +49,6 @@ def post_comment_create_and_list_view(request):
 
     return render(request, 'posts/main.html', context)
 
-
 def like_unlike_post(request):
     user = request.user
     if request.method == 'POST':
@@ -79,11 +76,11 @@ def like_unlike_post(request):
 
     return redirect('posts:main-post-view')
 
-class PostDeleteView(LoginRequiredMixin, DeleteView):
+class PostDeleteView(DeleteView):
     model = Post
     template_name = 'posts/confirm_del.html'
     success_url = reverse_lazy('posts:main-post-view')
-
+    # success_url = '/posts/'
 
     def get_object(self, *args, **kwargs):
         pk = self.kwargs.get('pk')
@@ -92,7 +89,7 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
             messages.warning(self.request, 'You need to be the author of the post in order to delete it')
         return obj
 
-class PostUpdateView(LoginRequiredMixin, UpdateView):
+class PostUpdateView(UpdateView):
     form_class = PostModelForm
     model = Post
     template_name = 'posts/update.html'
@@ -105,3 +102,4 @@ class PostUpdateView(LoginRequiredMixin, UpdateView):
         else:
             form.add_error(None, "You need to be the author of the post in order to update it")
             return super().form_invalid(form)
+    
