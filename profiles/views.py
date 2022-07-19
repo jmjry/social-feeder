@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from .models import Profile, Relationship
 from .forms import ProfileModelForm
-from django.views.generic import ListView 
+from django.views.generic import ListView
+from django.contrib.auth.models import User 
 # Create your views here.
 
 
