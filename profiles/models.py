@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 from .utils import get_random_code
 from django.template.defaultfilters import slugify
 from django.db.models import Q
-
 # Create your models here.
 
 
@@ -30,8 +29,6 @@ class ProfileManager(models.Manager):
         print("#########")
         return available
         
-
-
     def get_all_profiles(self, me):
         profiles = Profile.objects.all().exclude(user=me)
         return profiles
@@ -55,26 +52,20 @@ class Profile(models.Model):
     def __str__(self):
         return f"{self.user.username}-{self.created.strftime('%d-%m-%Y')}"
 
-
     def get_absolute_url(self):
         return reverse("profiles:profile-detail-view", kwargs={"slug": self.slug})
-    
 
     def get_friends(self):
         return self.friends.all()
 
-
     def get_friends_no(self):
         return self.friends.all().count()
-
 
     def get_posts_no(self):
         return self.posts.all().count()
 
-
     def get_all_authors_posts(self):
         return self.posts.all()
-
 
     def get_likes_given_no(self):
         likes = self.like_set.all()
@@ -84,14 +75,12 @@ class Profile(models.Model):
                 total_liked += 1
         return total_liked
 
-
     def get_likes_recieved_no(self):
         posts = self.posts.all()
         total_liked = 0
         for item in posts:
             total_liked += item.liked.all().count()
         return total_liked
-
 
     __initial_first_name = None
     __initial_last_name = None
@@ -139,7 +128,6 @@ class Relationship(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     objects = RelationshipManager()
-
 
     def __str__(self):
         return f"{self.sender}-{self.receiver}-{self.status}"
