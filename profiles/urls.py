@@ -18,4 +18,5 @@ urlpatterns = [
     path('to-invite/', invite_profiles_list_view, name='invite-profiles-view'),
     path('send-invite/', send_invatation, name='send-invite'),
     path('remove-friend/', remove_from_friends, name='remove-friend'),
+    path('my-invites/acctept/', accept_invatation, name='accept-invite'),
 ]

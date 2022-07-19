@@ -109,3 +109,16 @@ def remove_from_friends(request):
         rel.delete()
         return redirect(request.META.get('HTTP_REFERER'))
     return redirect('profiles:my-profile-view')
+
+
+def accept_invatation(request):
+    if request.method=="POST":
+        pk = request.POST.get('profile_pk')
+        sender = Profile.objects.get(pk=pk)
+        receiver = Profile.objects.get(user=request.user)
+        rel = get_object_or_404(Relationship, sender=sender, receiver=receiver)
+        if rel.status == 'send':
+            rel.status = 'accepted'
+            rel.save()
+    return redirect('profiles:my-invites-view')
+
