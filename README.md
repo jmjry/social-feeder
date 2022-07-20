@@ -28,14 +28,6 @@ To manage my User Stories I created a [Trello board](https://trello.com/en). Tre
 2. Blogger - Food & drink bloggers will use the site to connect with enthusiasts and businesses to grow their network.
 3. Enthusiast - Access to their favourite bloggers, businesses or professionals working in hospitality.
 
-### Wireframes 
-
-[Wireframes were deisgned on Balsamiq](https://balsamiq.com/)
-
-![New Wireframe 1](https://user-images.githubusercontent.com/86608354/180091800-56f1deb2-0ee1-4504-b0f5-fd710ebd19db.png)
-
-
-
 ## Features 
 
 ### Feature 1 - Account Registration 
@@ -115,6 +107,14 @@ Users can like posts which will appear in the feed.
 ![Request](https://user-images.githubusercontent.com/86608354/180089188-2b3d2739-0471-431b-be85-d56a9d96b37c.png)
 
 You can invite other users to add you as a friend. Invites will appear in the box and when clicked the profile and information of the user who added you will appear.
+
+
+### Wireframes 
+
+[Wireframes were deisgned on Balsamiq](https://balsamiq.com/)
+![New Wireframe 1](https://user-images.githubusercontent.com/86608354/180092081-2c22c6e8-0dab-4e2a-bb86-e8a8f78522ca.png)
+![New Wireframe 1 copy](https://user-images.githubusercontent.com/86608354/180092089-16115f84-785a-40ed-806e-b7805e721775.png)
+
 
 
 ## Features to implement in future versions
