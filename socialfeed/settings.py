@@ -41,14 +41,22 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'profiles',
     'posts',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
-LOGIN_URL = '/admin/'
+SITE_ID = 1
+
+# LOGIN_URL = '/admin/'
+
+LOGIN_REDIRECT_URL = '/posts'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -78,6 +86,16 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+AUTHENTICATION_BACKENDS = [
+    
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+    
 ]
 
 WSGI_APPLICATION = 'socialfeed.wsgi.application'
