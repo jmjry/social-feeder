@@ -117,6 +117,21 @@ You can invite other users to add you as a friend. Invites will appear in the bo
 
 ### Video 
 
+## Data Model
+
+### Relationships 
+
+- I planned the logic to ensure a user could register. login and generate their own profile. They can then search for other users and add them to their friends list. This data model required deep thought to ensure the process was seamless and that the user experience was a smooth transaction with minimal actions required.
+
+### Posts 
+
+#### Comments 
+
+- Users comments will be stored with the post commented on. This was purposely designed so that useres could interact with friends or other users on posts that were interesting. 
+
+#### Likes 
+
+- Users likes will be stored with the post liked. This will increase based on the amount of likes the post recieves. Total likes are stored in a users profile.
 
 ## Technologies used
 
@@ -160,6 +175,9 @@ You can invite other users to add you as a friend. Invites will appear in the bo
 
 * Tested all key features, responsiveness and links of the site. 
 
+<img width="629" alt="Screenshot 2022-07-20 at 23 01 33" src="https://user-images.githubusercontent.com/86608354/180090155-23d4b447-295d-4fd3-8488-717c6df7d77f.png">
+
+* Automated tests passed.
 
 ## Deployment 
 
@@ -183,6 +201,18 @@ You can invite other users to add you as a friend. Invites will appear in the bo
 18. In the app dashboard, under Settings click on Reveal Config Vars
 19. Set "SECRET_KEY"
 20. Once the build is complete, go back to Heroku and click on Open App
+
+## Todo list
+
+### Known Bugs
+
+- Opening a profile does not always work. I need to rework my relationship functions and ensure you can open friends profiles and view all their information. 
+- Sometimes the profile picture does not automatically generate.
+
+### User Experience 
+
+- New layout which is more branded (unique pictures, graphics etc)
+- Implement Cloudinary which was installed
 
 
 ## Credits 
