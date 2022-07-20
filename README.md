@@ -13,12 +13,14 @@ Social-Feed is a foodie dedicated social media page. It looks to encourage foodi
 
 ### User Stories 
 
-1. As a Site User I can view a paginated list of posts so that I can select which post I want to view
+1. As a Site User I can view a ist of posts so that I can select which post I want to view
 2. As a Site User I can view a list of posts so that I can select one to read
 3. As a Site User I can click on a post so that I can read the full text
-4. As a Site User I can view the reccomended posts
+4. As a Site User I can interact with posts
 6. As a Site User I can register an account so that I can comment and like
-7. As a Site Admin I can create, read, update and delete posts so that I can manage my blog content
+7. As a Site Admin I can create, read, update and delete posts so that I can manage my blog content]\
+
+To manage my User Stories I created a [Trello board](https://trello.com/en). Trello is a web-based Kanban-style application popular with Agile devleopment.
 
 ### Type of Visitors 
 
@@ -34,7 +36,7 @@ Social-Feed is a foodie dedicated social media page. It looks to encourage foodi
 
 ### Feature 1 - Account Registration 
 
-ENTER SCREENSHOT 
+![sign up](https://user-images.githubusercontent.com/86608354/180088638-535fc104-ccc6-4e26-9cd7-05d5a5b133b3.png)
 
  Users can click Register to open the Account Registartion form. The form will allow users to enter a Username, Email and Password before confirming the Password and signing up.
  
@@ -46,7 +48,8 @@ ENTER SCREENSHOT
  
 ### Feature 2 - Login
 
-ENTER SCREENSHOT 
+![sign in](https://user-images.githubusercontent.com/86608354/180088665-8e1c694d-2750-43ef-9caa-479f5e08fb62.png)
+![Are you sure you want to sign out](https://user-images.githubusercontent.com/86608354/180089120-821461a0-55dc-44dd-9767-66e9bbfe78c7.png)
 
  With an account successfully made, Users can login with their credentials. Firstly, they must either click Login on the navigation bar or click Sign In when prompted during registration.
  
@@ -56,61 +59,79 @@ ENTER SCREENSHOT
 
 ### Feature 3 - Home / Social
 
-ENTER SCREENSHOT 
+![Home](https://user-images.githubusercontent.com/86608354/180088691-0221e3f0-b795-43aa-9171-12ade9c79cf1.png)
 
 Social is the default home page for all users. Social is the newsfeed, displaying all posts by all users in chronological order. Users can navigate the pages of posts using the page number, next, last or previous buttons available at the bottom. In the next version of Social-Feed, it will only display posts from users that you follow.
 
 ### Feature 4 - Posting
 
-ENTER SCREENSHOT 
-
 After registering, users can create their post by clicking Post. Users will then have the posting form available which has to be filled before submitting by clicking the Post button. Posts are used by users to create content such as recipes, events or promoting their business.
 
 ### Feature 5 - Posts
 
-ENTER SCREENSHOT 
+![Post](https://user-images.githubusercontent.com/86608354/180088743-c9216a60-fcef-415c-8778-2407f4b298f5.png)
 
 By clicking the post title a pos
 t can be opened. After opening the post, you can view more detail or if you're the post owner, you can update or delete the post. If you're not the owner of the post, you are unable to update or delete the post.
 
 ### Feature 6 - Profile 
 
-ENTER SCREENSHOT 
+![Profile](https://user-images.githubusercontent.com/86608354/180088769-853a9078-2db6-4fda-a2fc-05d95c3bf895.png)
 
 After registering, a profile will be automatically generated. This will display the Username, email and profile picture with an option to update. Additionally, the Profile tab on the navigaion bar will be replaced by the users Username.
 
 ### Feature 7 - Profile Pictures 
 
-ENTER SCREENSHOT 
+![avatar](https://user-images.githubusercontent.com/86608354/180088785-c953f051-ceb0-4268-bd95-fee5d213f22c.png)
 
 Users will be automatically given a standard Profile Picture when registered. They can change their picture at anytime using the Choose File field to select an image and the Update to see confirmation of a successful image change. The image will be automatically reshaped into a circle.
 
-### Feature 8 - Reccomended Posts
 
-ENTER SCREENSHOT 
+### Feature 8 - Navigation Bar 
 
-The Reccomended Posts or Feed highlights interesting posts to users such as News, Recipes or Promotions. All of the titles are clickable, a new tab will be opened and the user directed to that page. 
+![NAV](https://user-images.githubusercontent.com/86608354/180088845-ea735a9e-fac7-4c19-a444-23a4d8bdd55d.png)
 
-### Feature 9 - Sidebar
+The navigation bar presents a way for users to navigate the site.
 
-ENTER SCREENSHOT 
+### Feature 9 - Comments
 
-On the left of the screen I've added a Sidebar to provide easier navigation for Users. New pages will be added in the future to improve User Experience when navigating the site.
+![Comment](https://user-images.githubusercontent.com/86608354/180088969-717c8449-5139-46bd-ab41-9307bec81c14.png)
 
-### Feature 10 - Navigation Bar 
+Users can interact with each other by leaving comments on their posts.
 
-ENTER SCREENSHOT 
+### Feature 10 - Likes
 
-The navigation bar presents the page name, Social, Feed, Post, User and Logout. All of the links work as intended and provide simple navigation for users.
+![Like](https://user-images.githubusercontent.com/86608354/180088982-67658b99-bd59-4d9f-bc43-e15959008700.png)
 
-### Feature 11 - Comments & Likes
+Users can like posts which will appear in the feed.
 
-### Feature 12 - Video 
+### Feature 11 - Invite User 
+
+![Invites](https://user-images.githubusercontent.com/86608354/180089179-1e0808ce-3449-475b-b9d1-c0dd77722da9.png)
+![Request](https://user-images.githubusercontent.com/86608354/180089188-2b3d2739-0471-431b-be85-d56a9d96b37c.png)
+
+You can invite other users to add you as a friend. Invites will appear in the box and when clicked the profile and information of the user who added you will appear.
 
 
 ## Features to implement in future versions
 
+### Video 
 
+## Data Model
+
+### Relationships 
+
+- I planned the logic to ensure a user could register. login and generate their own profile. They can then search for other users and add them to their friends list. This data model required deep thought to ensure the process was seamless and that the user experience was a smooth transaction with minimal actions required.
+
+### Posts 
+
+#### Comments 
+
+- Users comments will be stored with the post commented on. This was purposely designed so that useres could interact with friends or other users on posts that were interesting. 
+
+#### Likes 
+
+- Users likes will be stored with the post liked. This will increase based on the amount of likes the post recieves. Total likes are stored in a users profile.
 
 ## Technologies used
 
@@ -146,14 +167,17 @@ The navigation bar presents the page name, Social, Feed, Post, User and Logout. 
 
 - [Sys](https://docs.python.org/3/library/sys.html)
 
+- [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+
 
 
 ## Testing 
 
 * Tested all key features, responsiveness and links of the site. 
 
-* Automated tests setup for the .py pages. All results came back as anticipated.
+<img width="629" alt="Screenshot 2022-07-20 at 23 01 33" src="https://user-images.githubusercontent.com/86608354/180090155-23d4b447-295d-4fd3-8488-717c6df7d77f.png">
 
+* Automated tests passed.
 
 ## Deployment 
 
@@ -178,6 +202,18 @@ The navigation bar presents the page name, Social, Feed, Post, User and Logout. 
 19. Set "SECRET_KEY"
 20. Once the build is complete, go back to Heroku and click on Open App
 
+## Todo list
+
+### Known Bugs
+
+- Opening a profile does not always work. I need to rework my relationship functions and ensure you can open friends profiles and view all their information. 
+- Sometimes the profile picture does not automatically generate.
+
+### User Experience 
+
+- New layout which is more branded (unique pictures, graphics etc)
+- Implement Cloudinary which was installed
+
 
 ## Credits 
 
@@ -185,28 +221,19 @@ The navigation bar presents the page name, Social, Feed, Post, User and Logout. 
  * To ensure my HTML code was formatted correctly, I ran it through a formatter which can be found here: [HTML Code Formatter](https://www.freeformatter.com/html-formatter.html)
  * To ensure my JavaScript code was formatted correctly, I ran it through a formatter which can be found here: [JavaScript Code Formatter](https://beautifier.io/)
  * To ensure my Python code was formatted correctly, I ran it through a PEP8 formatter which can be found here: [Python Formatter](https://codebeautify.org/python-formatter-beautifier) 
- * To create representation images of the site [Am I Responsive](https://ui.dev/amiresponsive)
 
 
 ## Content 
 
 * Any unlinked post content was written by me.
 * All accounts created were registered by me.
-* [Reccomended Post] Pea Porridge by EADT(https://www.eadt.co.uk/news/pea-porridge-receives-only-michelin-star-in-suffolk-7919860)
-* [Reccomended Post] FEED is owned by me.(https://jmjry.github.io/feed/)
-* [Reccomended Post] Recipe of the month by BBC(https://www.bbc.co.uk/food/recipes/vegan_thai_green_curry_69640)
-* [Reccomended Post] Pub chain opening new pubs by EADT (https://www.eadt.co.uk/news/business/suffolk-pub-chain-snaps-up-two-pubs-8372208)
+* [Pea Porridge by EADT](https://www.eadt.co.uk/news/pea-porridge-receives-only-michelin-star-in-suffolk-7919860)
+* [FEED is owned by me.](https://jmjry.github.io/feed/)
+* [Recipe of the month by BBC](https://www.bbc.co.uk/food/recipes/vegan_thai_green_curry_69640)
 
 All content has the sole use for education.
-
 
 ### Code 
 
 * As a go to reasource hub I used [W3S Schools](https://www.w3schools.com/default.asp).
 * When stuck on a development issue, I checked [Stackoverflow](https://stackoverflow.com) to see if other developers had the same problems.
-* CREDIT CODE 
-* CREDIT CODE 
-* CREDIT CODE 
-* CREDIT CODE 
-* To learn about Crispy forms I used the [documentation available](https://django-crispy-forms.readthedocs.io/en/latest/)
-
