@@ -7,7 +7,7 @@ def home_view(request):
 
     context = {
         'user': user,
-        'hello' : hello,
+        'hello': hello,
     }
     return render(request, 'main/home.html', context)
     # return HttpResponse('Hello world')
