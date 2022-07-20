@@ -74,6 +74,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'profiles.context_processors.profile_pic',
+                'profiles.context_processors.invatations_received_no',
             ],
         },
     },
