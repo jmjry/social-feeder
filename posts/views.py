@@ -10,6 +10,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
+
 @login_required
 def post_comment_create_and_list_view(request):
     qs = Post.objects.all()
@@ -41,7 +42,6 @@ def post_comment_create_and_list_view(request):
             instance.save()
             c_form = CommentModelForm()
 
-
     context = {
         'qs': qs,
         'profile': profile,
@@ -51,6 +51,7 @@ def post_comment_create_and_list_view(request):
     }
 
     return render(request, 'posts/main.html', context)
+
 
 @login_required
 def like_unlike_post(request):
@@ -68,16 +69,17 @@ def like_unlike_post(request):
         like, created = Like.objects.get_or_create(user=profile, post_id=post_id)
 
         if not created:
-            if like.value=='Like':
-                like.value='Unlike'
+            if like.value == 'Like':
+                like.value = 'Unlike'
             else:
-                like.value='Like'
+                like.value = 'Like'
         else:
-            like.value='Like'
+            like.value = 'Like'
 
             post_obj.save()
             like.save()
     return redirect('posts:main-post-view')
+
 
 class PostDeleteView(LoginRequiredMixin, DeleteView):
     model = Post
@@ -91,6 +93,7 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
         if not obj.author.user == self.request.user:
             messages.warning(self.request, 'You need to be the author of the post in order to delete it')
         return obj
+
 
 class PostUpdateView(LoginRequiredMixin, UpdateView):
     form_class = PostModelForm

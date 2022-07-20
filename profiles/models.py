@@ -71,7 +71,7 @@ class Profile(models.Model):
         likes = self.like_set.all()
         total_liked = 0
         for item in likes:
-            if item.value=='Like':
+            if item.value == 'Like':
                 total_liked += 1
         return total_liked
 
@@ -85,17 +85,15 @@ class Profile(models.Model):
     __initial_first_name = None
     __initial_last_name = None
 
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.__initial_first_name = self.first_name
         self.__initial_last_name = self.last_name
 
-
     def save(self, *args, **kwargs):
         ex = False
         to_slug = self.slug
-        if self.first_name != self.__initial_first_name or self.last_name != self.__initial_last_name or self.slug=="":
+        if self.first_name != self.__initial_first_name or self.last_name != self.__initial_last_name or self.slug == "":
             if self.first_name and self.last_name:
                 to_slug = slugify(str(self.first_name) + " " + str(self.last_name))
                 ex = Profile.objects.filter(slug=to_slug).exists()
