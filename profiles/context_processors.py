@@ -1,4 +1,4 @@
-from .models import Profile
+from .models import Profile, Relationship
 
 
 def profile_pic(request):
