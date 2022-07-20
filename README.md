@@ -32,7 +32,8 @@ To manage my User Stories I created a [Trello board](https://trello.com/en). Tre
 
 [Wireframes were deisgned on Balsamiq](https://balsamiq.com/)
 
-[PP4 1 .pdf](https://github.com/jmjry/social-feeder/files/9154785/PP4.1.pdf)
+![New Wireframe 1](https://user-images.githubusercontent.com/86608354/180091800-56f1deb2-0ee1-4504-b0f5-fd710ebd19db.png)
+
 
 
 ## Features 
