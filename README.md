@@ -191,20 +191,17 @@ You can invite other users to add you as a friend. Invites will appear in the bo
  * To ensure my HTML code was formatted correctly, I ran it through a formatter which can be found here: [HTML Code Formatter](https://www.freeformatter.com/html-formatter.html)
  * To ensure my JavaScript code was formatted correctly, I ran it through a formatter which can be found here: [JavaScript Code Formatter](https://beautifier.io/)
  * To ensure my Python code was formatted correctly, I ran it through a PEP8 formatter which can be found here: [Python Formatter](https://codebeautify.org/python-formatter-beautifier) 
- * To create representation images of the site [Am I Responsive](https://ui.dev/amiresponsive)
 
 
 ## Content 
 
 * Any unlinked post content was written by me.
 * All accounts created were registered by me.
-* [Reccomended Post] Pea Porridge by EADT(https://www.eadt.co.uk/news/pea-porridge-receives-only-michelin-star-in-suffolk-7919860)
-* [Reccomended Post] FEED is owned by me.(https://jmjry.github.io/feed/)
-* [Reccomended Post] Recipe of the month by BBC(https://www.bbc.co.uk/food/recipes/vegan_thai_green_curry_69640)
-* [Reccomended Post] Pub chain opening new pubs by EADT (https://www.eadt.co.uk/news/business/suffolk-pub-chain-snaps-up-two-pubs-8372208)
+* [Pea Porridge by EADT](https://www.eadt.co.uk/news/pea-porridge-receives-only-michelin-star-in-suffolk-7919860)
+* [FEED is owned by me.](https://jmjry.github.io/feed/)
+* [Recipe of the month by BBC](https://www.bbc.co.uk/food/recipes/vegan_thai_green_curry_69640)
 
 All content has the sole use for education.
-
 
 ### Code 
 
