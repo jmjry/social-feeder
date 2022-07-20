@@ -32,6 +32,9 @@ To manage my User Stories I created a [Trello board](https://trello.com/en). Tre
 
 [Wireframes were deisgned on Balsamiq](https://balsamiq.com/)
 
+[PP4 1 .pdf](https://github.com/jmjry/social-feeder/files/9154785/PP4.1.pdf)
+
+
 ## Features 
 
 ### Feature 1 - Account Registration 
