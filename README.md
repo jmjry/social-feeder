@@ -159,11 +159,9 @@ You can invite other users to add you as a friend. Invites will appear in the bo
 
 - [Django 2.1](https://www.djangoproject.com/): 
 
-- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
-
 - [Bootstrap](https://getbootstrap.com/)
 
-- [DJ_Database_URL](https://pypi.org/project/dj-database-url/)
+- [DJ_Database_URL](https://pypi.org/project/dj-database-url/) 
 
 - [OS](https://docs.python.org/3/library/os.html)
 
@@ -171,7 +169,7 @@ You can invite other users to add you as a friend. Invites will appear in the bo
 
 - [Sys](https://docs.python.org/3/library/sys.html)
 
-- [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+- [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) used to provide authentication and registration.
 
 
 
