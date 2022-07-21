@@ -28,10 +28,6 @@ To manage my User Stories I created a [Trello board](https://trello.com/en). Tre
 2. Blogger - Food & drink bloggers will use the site to connect with enthusiasts and businesses to grow their network.
 3. Enthusiast - Access to their favourite bloggers, businesses or professionals working in hospitality.
 
-### Wireframes 
-
-[Wireframes were deisgned on Balsamiq](https://balsamiq.com/)
-
 ## Features 
 
 ### Feature 1 - Account Registration 
@@ -113,6 +109,14 @@ Users can like posts which will appear in the feed.
 You can invite other users to add you as a friend. Invites will appear in the box and when clicked the profile and information of the user who added you will appear.
 
 
+### Wireframes 
+
+[Wireframes were deisgned on Balsamiq](https://balsamiq.com/)
+![New Wireframe 1](https://user-images.githubusercontent.com/86608354/180092081-2c22c6e8-0dab-4e2a-bb86-e8a8f78522ca.png)
+![New Wireframe 1 copy](https://user-images.githubusercontent.com/86608354/180092089-16115f84-785a-40ed-806e-b7805e721775.png)
+
+
+
 ## Features to implement in future versions
 
 ### Video 
@@ -155,11 +159,9 @@ You can invite other users to add you as a friend. Invites will appear in the bo
 
 - [Django 2.1](https://www.djangoproject.com/): 
 
-- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
-
 - [Bootstrap](https://getbootstrap.com/)
 
-- [DJ_Database_URL](https://pypi.org/project/dj-database-url/)
+- [DJ_Database_URL](https://pypi.org/project/dj-database-url/) 
 
 - [OS](https://docs.python.org/3/library/os.html)
 
@@ -167,7 +169,7 @@ You can invite other users to add you as a friend. Invites will appear in the bo
 
 - [Sys](https://docs.python.org/3/library/sys.html)
 
-- [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+- [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) used to provide authentication and registration.
 
 
 
