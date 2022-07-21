@@ -48,7 +48,7 @@ def invites_received_view(request):
 
 @login_required
 def accept_invatation(request):
-    if request.method == "POST":
+    if request.method=="POST":
         pk = request.POST.get('profile_pk')
         sender = Profile.objects.get(pk=pk)
         receiver = Profile.objects.get(user=request.user)
@@ -61,7 +61,7 @@ def accept_invatation(request):
 
 @login_required
 def reject_invatation(request):
-    if request.method == "POST":
+    if request.method=="POST":
         pk = request.POST.get('profile_pk')
         receiver = Profile.objects.get(user=request.user)
         sender = Profile.objects.get(pk=pk)
@@ -150,7 +150,7 @@ class ProfileListView(LoginRequiredMixin, ListView):
 
 @login_required
 def send_invatation(request):
-    if request.method == 'POST':
+    if request.method=='POST':
         pk = request.POST.get('profile_pk')
         user = request.user
         sender = Profile.objects.get(user=user)
@@ -164,7 +164,7 @@ def send_invatation(request):
 
 @login_required
 def remove_from_friends(request):
-    if request.method == 'POST':
+    if request.method=='POST':
         pk = request.POST.get('profile_pk')
         user = request.user
         sender = Profile.objects.get(user=user)

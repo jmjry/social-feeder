@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['social-feed-remake.herokuapp.com', 'localhost']
 
@@ -62,9 +62,6 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_UNIQUE = True
 # ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-
-if DEBUG: 
-    EMAIL_BACKEND = 'django.core.mail.backend.dummy.EmailBackend'
 
 # EMAIL_BACKEND = 'django.core.mail.backend.smtp.EmailBackend'
 
